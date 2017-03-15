@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SKFPicPreview_Example' do
+  pod 'SKFPicPreview', :path => '../'
+
+  target 'SKFPicPreview_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
