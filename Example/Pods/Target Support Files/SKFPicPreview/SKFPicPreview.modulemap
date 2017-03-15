@@ -1,0 +1,6 @@
+framework module SKFPicPreview {
+  umbrella header "SKFPicPreview-umbrella.h"
+
+  export *
+  module * { export * }
+}

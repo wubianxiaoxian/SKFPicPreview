@@ -1,0 +1,22 @@
+{
+  "name": "SKFPicPreview",
+  "version": "0.1.0",
+  "summary": "A short description of SKFPicPreview.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/wubianxiaoxian/SKFPicPreview",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wubianxiaoxian": "xx@xx.com"
+  },
+  "source": {
+    "git": "https://github.com/wubianxiaoxian/SKFPicPreview.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SKFPicPreview/Classes/**/*"
+}

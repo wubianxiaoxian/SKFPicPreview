@@ -1,0 +1,16 @@
+PODS:
+  - SKFPicPreview (0.1.0)
+
+DEPENDENCIES:
+  - SKFPicPreview (from `../`)
+
+EXTERNAL SOURCES:
+  SKFPicPreview:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SKFPicPreview: a2ef50d1850a3c03196bc65e2df6eaa3efc67f3d
+
+PODFILE CHECKSUM: 3895a093fd77457f8a9a2df135d3d74b06ef5156
+
+COCOAPODS: 1.2.0.beta.1
