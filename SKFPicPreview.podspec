@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SKFPicPreview'
-  s.version          = '1.0'
+  s.version          = '1.1'
 s.summary          = ' This is a preview of the library
 .'
 
@@ -31,7 +31,7 @@ This is a preview of the library xxxxx.
 #s.resource  = "SKFTestviewDemo/SKFTestviewDemo/SKFTestview/SKFtest.bundle"
 
    s.resource_bundles = {
-     'SKFPicPreview' => ['SKFPicPreview/Assets/*.png']
+     'SKFPicPreview' => ['Resuorces/SKFPicPreview/Assets/*']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

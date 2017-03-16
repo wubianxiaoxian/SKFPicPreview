@@ -1,6 +1,6 @@
 {
   "name": "SKFPicPreview",
-  "version": "1.0",
+  "version": "1.1",
   "summary": "This is a preview of the library\n.",
   "description": "This is a preview of the library xxxxx.",
   "homepage": "https://github.com/wubianxiaoxian/SKFPicPreview",
@@ -14,16 +14,15 @@
   },
   "source": {
     "git": "https://github.com/wubianxiaoxian/SKFPicPreview.git",
-    "tag": "1.0"
+    "tag": "1.1"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "SKFPicPreview/Classes/**/*",
-  "resources": "SKFTestviewDemo/SKFTestviewDemo/SKFTestview/SKFtest.bundle",
   "resource_bundles": {
     "SKFPicPreview": [
-      "SKFPicPreview/Assets/*.png"
+      "Resuorces/SKFPicPreview/Assets/*"
     ]
   },
   "frameworks": "UIKit",

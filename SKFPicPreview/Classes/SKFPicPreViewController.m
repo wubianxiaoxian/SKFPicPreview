@@ -72,7 +72,7 @@
     _backButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 44, 44)];
     NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
     NSString *bundleName = [currentBundle.infoDictionary[@"CFBundleName"] stringByAppendingString:@".bundle"];
-    NSString *path = [currentBundle pathForResource:@"tabbar_bg@2x.png" ofType:nil inDirectory:bundleName];
+    NSString *path = [currentBundle pathForResource:@"navi_back@2x.png" ofType:nil inDirectory:bundleName];
     
     [_backButton setImage:[UIImage imageWithContentsOfFile:path] forState:UIControlStateNormal];
     [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
