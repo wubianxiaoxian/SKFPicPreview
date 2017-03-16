@@ -14,8 +14,12 @@
 
 @interface SKFPreViewNavController : UINavigationController
 
-/// This init method just for previewing photos / 用这个初始化方法以预览图片
+/// This init method just for previewing photos / 用这个初始化方法以预览本地图片
 - (instancetype)initWithSelectedPhotos:(NSMutableArray *)selectedPhotos index:(NSInteger)index DeletePic:(BOOL)isDeletePic;
+
+/// This init method just for previewing photos / 用这个初始化方法以预览网络图片
+- (instancetype)initWithSelectedPhotoURLs:(NSMutableArray *)selectedPhotourls index:(NSInteger)index;
+
 
 
 @property (nonatomic, copy) void (^didFinishDeletePic)(NSArray<UIImage *> *photos);

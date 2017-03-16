@@ -20,7 +20,7 @@
 #define iOS9_1Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.1f)
 @interface SKFPicPreViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 {
-    UICollectionView *_collectionView;
+//    UICollectionView *self.SKFPiccollectionView;
     BOOL _isHideNaviBar;
     UIView *_naviBar;
     UIButton *_backButton;
@@ -33,7 +33,7 @@
     UIButton *_originalPhotoButton;
     UILabel *_originalPhotoLable;
 }
-
+@property(nonatomic,strong)UICollectionView *SKFPiccollectionView;
 @end
 
 @implementation SKFPicPreViewController
@@ -42,6 +42,8 @@
     [super viewDidLoad];
     [self configCollectionView];
     [self configCustomNaviBar];
+    if (self.SKFPiccurrentIndex)
+    {[self.SKFPiccollectionView setContentOffset:CGPointMake((self.view.kf_width) * self.SKFPiccurrentIndex, 0) animated:NO];}
 }
 
 - (void)setPhotos:(NSMutableArray *)photos {
@@ -53,7 +55,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = YES;
-    if (_currentIndex) [_collectionView setContentOffset:CGPointMake((self.view.kf_width) * _currentIndex, 0) animated:NO];
+
     //    [self refreshNaviBarAndBottomBarState];
 }
 
@@ -72,7 +74,7 @@
     [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     _displayLabel=[[UILabel alloc]initWithFrame:CGRectMake(self.view.kf_width/2-25, 20, 50, 18)];
-    _displayLabel.text=[NSString stringWithFormat:@"%ld/%zd",_currentIndex+1,self.photos.count];
+    _displayLabel.text=[NSString stringWithFormat:@"%ld/%zd",self.SKFPiccurrentIndex+1,self.photos.count];
     
     _displayLabel.textAlignment = NSTextAlignmentCenter;
     _displayLabel.textColor=[UIColor whiteColor];
@@ -81,8 +83,11 @@
     [_selectButton setTitle:@"删除" forState:UIControlStateNormal];
     [_selectButton addTarget:self action:@selector(select:) forControlEvents:UIControlEventTouchUpInside];
     [_naviBar addSubview:_selectButton];
-    if (self.NewTZPreviewisDelete) {
+    if (!self.SKFPicisDelete) {
         _selectButton.hidden=YES;
+    }
+   else if (self.SKFPicisDelete) {
+        _selectButton.hidden=NO;
     }
     [_naviBar addSubview:_backButton];
     [_naviBar addSubview:_displayLabel];
@@ -95,17 +100,17 @@
     layout.itemSize = CGSizeMake(self.view.kf_width, self.view.kf_height);
     layout.minimumInteritemSpacing = 0;
     layout.minimumLineSpacing = 0;
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.kf_width , self.view.kf_height) collectionViewLayout:layout];
-    _collectionView.backgroundColor = [UIColor blackColor];
-    _collectionView.dataSource = self;
-    _collectionView.delegate = self;
-    _collectionView.pagingEnabled = YES;
-    _collectionView.scrollsToTop = NO;
-    _collectionView.showsHorizontalScrollIndicator = NO;
-    _collectionView.contentOffset = CGPointMake(0, 0);
-    _collectionView.contentSize = CGSizeMake(self.view.kf_width * _photos.count, self.view.kf_height);
-    [self.view addSubview:_collectionView];
-    [_collectionView registerClass:[SKFPreviweCell class] forCellWithReuseIdentifier:@"SKFPreviweCell"];
+    self.SKFPiccollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.kf_width , self.view.kf_height) collectionViewLayout:layout];
+    self.SKFPiccollectionView.backgroundColor = [UIColor blackColor];
+    self.SKFPiccollectionView.dataSource = self;
+    self.SKFPiccollectionView.delegate = self;
+    self.SKFPiccollectionView.pagingEnabled = YES;
+    self.SKFPiccollectionView.scrollsToTop = NO;
+    self.SKFPiccollectionView.showsHorizontalScrollIndicator = NO;
+    self.SKFPiccollectionView.contentOffset = CGPointMake(0, 0);
+    self.SKFPiccollectionView.contentSize = CGSizeMake(self.view.kf_width * _photos.count, self.view.kf_height);
+    [self.view addSubview:self.SKFPiccollectionView];
+    [self.SKFPiccollectionView registerClass:[SKFPreviweCell class] forCellWithReuseIdentifier:@"SKFPreviweCell"];
 }
 
 #pragma mark - Click Event
@@ -118,8 +123,8 @@
         NSLog(@"我点击了取消");
     }
     else if (buttonIndex==1){
-        NSLog(@"删除前self.photos %@ self.photosTemp[_currentIndex]%@  _currentIndex %ld",self.photos,self.photosTemp[_currentIndex],(long)_currentIndex);
-        [self.photos removeObject:self.photosTemp[_currentIndex]];
+        NSLog(@"删除前self.photos %@ self.photosTemp[self.SKFPiccurrentIndex]%@  self.SKFPiccurrentIndex %ld",self.photos,self.photosTemp[self.SKFPiccurrentIndex],(long)self.SKFPiccurrentIndex);
+        [self.photos removeObject:self.photosTemp[self.SKFPiccurrentIndex]];
         
         [self okButtonClick];
         
@@ -149,9 +154,9 @@
     if (self.okButtonClickBlockWithPreviewType) {
         
         self.okButtonClickBlockWithPreviewType(self.photos);
-        _displayLabel.text=[NSString stringWithFormat:@"%ld/%zd",_currentIndex+1,self.photos.count];
+        _displayLabel.text=[NSString stringWithFormat:@"%ld/%zd",self.SKFPiccurrentIndex+1,self.photos.count];
         
-        [_collectionView reloadData];
+        [self.SKFPiccollectionView reloadData];
         
     }
     
@@ -163,9 +168,11 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGPoint offSet = scrollView.contentOffset;
-    _currentIndex = (offSet.x + (self.view.kf_width * 0.5)) / self.view.kf_width;
-    NSLog(@"当前页_currentIndex %ld",(long)_currentIndex);
-    _displayLabel.text=[NSString stringWithFormat:@"%ld/%zd",_currentIndex+1,self.photos.count];
+    NSLog(@"当前页self.SKFPiccurrentIndex %ld",(long)self.SKFPiccurrentIndex);
+
+    self.SKFPiccurrentIndex = (offSet.x + (self.view.kf_width * 0.5)) / self.view.kf_width;
+    NSLog(@"offSet.x%f self.view.kf_width %f %f",offSet.x,self.view.kf_width,self.view.frame.size.width);
+    _displayLabel.text=[NSString stringWithFormat:@"%ld/%zd",self.SKFPiccurrentIndex+1,self.photos.count];
     
 }
 

@@ -52,17 +52,17 @@
 
 /// This init method just for previewing photos / 用这个初始化方法以预览图片
 - (instancetype)initWithSelectedPhotos:(NSMutableArray *)selectedPhotos index:(NSInteger)index DeletePic:(BOOL)isDeletePic{
-    SKFPicPreViewController *NewTZPrevie=[[SKFPicPreViewController alloc]init];
-    self = [super initWithRootViewController:NewTZPrevie];
+    SKFPicPreViewController *SKFPicPre=[[SKFPicPreViewController alloc]init];
+    self = [super initWithRootViewController:SKFPicPre];
     if (self) {
         if (isDeletePic) {
-            NewTZPrevie.NewTZPreviewisDelete=YES;
+            SKFPicPre.SKFPicisDelete=YES;
         }
-        NewTZPrevie.IsNative=YES;
-        NewTZPrevie.photos = [NSMutableArray arrayWithArray:selectedPhotos];
-        NewTZPrevie.currentIndex = index;
+        SKFPicPre.SKFPiccurrentIndex = index;
+        SKFPicPre.IsNative=YES;
+        SKFPicPre.photos = [NSMutableArray arrayWithArray:selectedPhotos];
         __weak typeof(self) weakSelf = self;
-        [NewTZPrevie setOkButtonClickBlockWithPreviewType:^(NSArray<UIImage *> *photos) {
+        [SKFPicPre setOkButtonClickBlockWithPreviewType:^(NSArray<UIImage *> *photos) {
             if (weakSelf.didFinishDeletePic) {
                 weakSelf.didFinishDeletePic(photos);
             }
@@ -70,10 +70,20 @@
         }];
     }
     
+    return self;
+}
+- (instancetype)initWithSelectedPhotoURLs:(NSMutableArray *)selectedPhotourls index:(NSInteger)index{
+    SKFPicPreViewController *SKFPicPre=[[SKFPicPreViewController alloc]init];
+    self = [super initWithRootViewController:SKFPicPre];
+    if (self) {
+        SKFPicPre.SKFPiccurrentIndex = index;
+        SKFPicPre.IsNative=NO;
+        SKFPicPre.photos = [NSMutableArray arrayWithArray:selectedPhotourls];
+
+    }
     
     return self;
 }
-
 
 
 

@@ -10,8 +10,8 @@
 
 @interface SKFPicPreViewController : UIViewController
 @property (nonatomic, strong) NSMutableArray *photos;                  ///< All photos  / 所有图片数组
-@property (nonatomic, assign) NSInteger currentIndex;           ///< Index of the photo user click / 用户点击的图片的索引
-@property(nonatomic,assign) BOOL NewTZPreviewisDelete;
+@property (nonatomic, assign) NSInteger SKFPiccurrentIndex;           ///< Index of the photo user click / 用户点击的图片的索引
+@property(nonatomic,assign) BOOL SKFPicisDelete;
 @property(nonatomic,strong)  NSMutableArray *photosTemp;
 
 

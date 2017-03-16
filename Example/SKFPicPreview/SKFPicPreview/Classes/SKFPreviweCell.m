@@ -6,7 +6,8 @@
 //  Copyright © 2017年 wubianxiaoxian. All rights reserved.
 //
 #import "UIView+layoutnew.h"
-
+#import "SDImageCache.h"
+#import "UIImageView+WebCache.h"
 #import "SKFPreviweCell.h"
 @interface SKFPreviweCell()<UIGestureRecognizerDelegate,UIScrollViewDelegate>
 
@@ -55,7 +56,7 @@
 }
 -(void)setKImageView:(NSString *)image{
     //拍照 10174123.jpg
-    //    [self.imageView sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@"拍照"]];
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@"拍照"]];
     [self resizeSubviews];
 }
 -(void)setKNativeImageview:(UIImage *)image{

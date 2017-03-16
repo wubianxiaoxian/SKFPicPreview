@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DA896F01E7A50350073B8EC /* SKFPicPreview.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DA896EF1E7A50350073B8EC /* SKFPicPreview.bundle */; };
+		1DA897321E7A8E1B0073B8EC /* KFCollectionCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA897311E7A8E1B0073B8EC /* KFCollectionCellTwo.m */; };
 		1DC876601E7931A300F5C75A /* KFCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8765D1E7931A300F5C75A /* KFCollectionCell.m */; };
 		1DC876641E7931B900F5C75A /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC876631E7931B900F5C75A /* LxGridViewFlowLayout.m */; };
 		1DC876711E79323800F5C75A /* UIView+layoutnew.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8766D1E79323800F5C75A /* UIView+layoutnew.m */; };
@@ -76,6 +77,8 @@
 
 /* Begin PBXFileReference section */
 		1DA896EF1E7A50350073B8EC /* SKFPicPreview.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SKFPicPreview.bundle; sourceTree = "<group>"; };
+		1DA897301E7A8E1B0073B8EC /* KFCollectionCellTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFCollectionCellTwo.h; sourceTree = "<group>"; };
+		1DA897311E7A8E1B0073B8EC /* KFCollectionCellTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFCollectionCellTwo.m; sourceTree = "<group>"; };
 		1DC8765C1E7931A300F5C75A /* KFCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFCollectionCell.h; sourceTree = "<group>"; };
 		1DC8765D1E7931A300F5C75A /* KFCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFCollectionCell.m; sourceTree = "<group>"; };
 		1DC876621E7931B900F5C75A /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 				1DC876D41E7933B100F5C75A /* ViewController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				1DC8765C1E7931A300F5C75A /* KFCollectionCell.h */,
+				1DA897301E7A8E1B0073B8EC /* KFCollectionCellTwo.h */,
+				1DA897311E7A8E1B0073B8EC /* KFCollectionCellTwo.m */,
 				1DC8765D1E7931A300F5C75A /* KFCollectionCell.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -629,6 +634,7 @@
 				1DC876A31E79324300F5C75A /* UIView+WebCacheOperation.m in Sources */,
 				1DC876A01E79324300F5C75A /* UIImage+WebP.m in Sources */,
 				1DC876D51E7933B100F5C75A /* ViewController.m in Sources */,
+				1DA897321E7A8E1B0073B8EC /* KFCollectionCellTwo.m in Sources */,
 				6003F59E195388D20070C39A /* SKFAppDelegate.m in Sources */,
 				1DC876A11E79324300F5C75A /* UIImageView+HighlightedWebCache.m in Sources */,
 				1DC876711E79323800F5C75A /* UIView+layoutnew.m in Sources */,
