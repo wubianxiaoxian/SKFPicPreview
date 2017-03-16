@@ -1,9 +1,10 @@
 {
   "name": "SKFPicPreview",
-  "version": "0.1.0",
-  "summary": "A short description of SKFPicPreview.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.0",
+  "summary": "This is a preview of the library\n.",
+  "description": "This is a preview of the library xxxxx.",
   "homepage": "https://github.com/wubianxiaoxian/SKFPicPreview",
+  "screenshots": "http://i1.piimg.com/4851/5d56f5cddbcff4df.gif",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -13,10 +14,22 @@
   },
   "source": {
     "git": "https://github.com/wubianxiaoxian/SKFPicPreview.git",
-    "tag": "0.1.0"
+    "tag": "1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "SKFPicPreview/Classes/**/*"
+  "source_files": "SKFPicPreview/Classes/**/*",
+  "resources": "SKFTestviewDemo/SKFTestviewDemo/SKFTestview/SKFtest.bundle",
+  "resource_bundles": {
+    "SKFPicPreview": [
+      "SKFPicPreview/Assets/*.png"
+    ]
+  },
+  "frameworks": "UIKit",
+  "dependencies": {
+    "SDWebImage": [
+
+    ]
+  }
 }

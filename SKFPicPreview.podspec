@@ -8,21 +8,18 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SKFPicPreview'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SKFPicPreview.'
+  s.version          = '1.0'
+s.summary          = ' This is a preview of the library
+.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This is a preview of the library xxxxx.
                        DESC
 
   s.homepage         = 'https://github.com/wubianxiaoxian/SKFPicPreview'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+   s.screenshots     = 'http://i1.piimg.com/4851/5d56f5cddbcff4df.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wubianxiaoxian' => 'xx@xx.com' }
   s.source           = { :git => 'https://github.com/wubianxiaoxian/SKFPicPreview.git', :tag => s.version.to_s }
@@ -31,12 +28,13 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'SKFPicPreview/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SKFPicPreview' => ['SKFPicPreview/Assets/*.png']
-  # }
+#s.resource  = "SKFTestviewDemo/SKFTestviewDemo/SKFTestview/SKFtest.bundle"
+
+   s.resource_bundles = {
+     'SKFPicPreview' => ['SKFPicPreview/Assets/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.frameworks = 'UIKit'
+   s.dependency 'SDWebImage'
 end

@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "SKFPicPreViewController.h"
+#import "SKFPreViewNavController.h"
+#import "SKFPreviweCell.h"
+#import "UIView+layoutnew.h"
 
 FOUNDATION_EXPORT double SKFPicPreviewVersionNumber;
 FOUNDATION_EXPORT const unsigned char SKFPicPreviewVersionString[];

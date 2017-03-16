@@ -70,7 +70,11 @@
     _naviBar.backgroundColor = [UIColor colorWithRed:(34/255.0) green:(34/255.0)  blue:(34/255.0) alpha:1.0];
     _naviBar.alpha = 0.7;
     _backButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 44, 44)];
-    [_backButton setImage:[UIImage imageNamedFromMyBundle:@"navi_back.png"] forState:UIControlStateNormal];
+    NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
+    NSString *bundleName = [currentBundle.infoDictionary[@"CFBundleName"] stringByAppendingString:@".bundle"];
+    NSString *path = [currentBundle pathForResource:@"tabbar_bg@2x.png" ofType:nil inDirectory:bundleName];
+    
+    [_backButton setImage:[UIImage imageWithContentsOfFile:path] forState:UIControlStateNormal];
     [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     _displayLabel=[[UILabel alloc]initWithFrame:CGRectMake(self.view.kf_width/2-25, 20, 50, 18)];
