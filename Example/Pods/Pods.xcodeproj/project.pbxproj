@@ -22,7 +22,7 @@
 		4C9090F6A9863F8F9B541D364332AE60 /* Pods-SKFPicPreview_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2123C64DC8015387D10B7AA6B37BE3C4 /* Pods-SKFPicPreview_Example-dummy.m */; };
 		4ED947CB23794C95DB86550C6C4CE013 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAB489E48DE882B0D2EEF605E964344 /* Foundation.framework */; };
 		503A4C41FE30CEE88E4D5A5CF9F6E5A5 /* Pods-SKFPicPreview_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13E7DE6894552F52C6BCF1E2FEFBE349 /* Pods-SKFPicPreview_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5EB75099E3B6AD44EE205160D3793D9F /* navi_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2E04F244F80DAD3BBC7E737D405CC6B /* navi_back@2x.png */; };
+		5EB75099E3B6AD44EE205160D3793D9F /* navi_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB700FFD0A774BB262C110D7A7BB6F45 /* navi_back@2x.png */; };
 		637541295DC02C942AC21EE1B6043185 /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 219DF7D9481BA690B5AED9DA9FE66218 /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A084BD4C79FB3952E921547BA1CFEE1 /* SKFPicPreview-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0857819E6A2C6B49B7361A2B174E09A7 /* SKFPicPreview-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C0558501C61630CECF6796ECCBDD1DE /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 756298A570B6942FCED3F05081C78CFB /* SDWebImagePrefetcher.m */; };
@@ -164,8 +164,8 @@
 		BD35FDC410E27DE2A3CC284B53AC2AA0 /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
 		BEA0847144A014796D0B0AE6C494F8E9 /* Pods_SKFPicPreview_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SKFPicPreview_Tests.framework; path = "Pods-SKFPicPreview_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E7CA4318CA5BF94632A97CD9BA58D3 /* Pods-SKFPicPreview_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SKFPicPreview_Example.modulemap"; sourceTree = "<group>"; };
+		CB700FFD0A774BB262C110D7A7BB6F45 /* navi_back@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "navi_back@2x.png"; sourceTree = "<group>"; };
 		D16D14B3586EB69C6727A7C6525FDC29 /* SKFPreViewNavController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SKFPreViewNavController.h; sourceTree = "<group>"; };
-		D2E04F244F80DAD3BBC7E737D405CC6B /* navi_back@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "navi_back@2x.png"; sourceTree = "<group>"; };
 		D47072C0ED9A1005E4C69BFBEAD3ACAA /* NSImage+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+WebCache.m"; path = "SDWebImage/NSImage+WebCache.m"; sourceTree = "<group>"; };
 		D4747FB858DFF2AB2644FC0ADF585B45 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
 		D4820634B6127B72FFA59EBC57B6D111 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
@@ -325,14 +325,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		2CB000E704EBBF33E166B59F79484CA4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7A5EBF657E9A910647E2711FC3C87192 /* Resuorces */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		3814F5B99D0D8EFA020D2B1C2D441646 /* Pods-SKFPicPreview_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,13 +343,21 @@
 			path = "Target Support Files/Pods-SKFPicPreview_Tests";
 			sourceTree = "<group>";
 		};
-		7A5EBF657E9A910647E2711FC3C87192 /* Resuorces */ = {
+		39C8011E27ADAB6CE37ACA49C28FF544 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CB0E53BA356C609B1D993C2CB64A64DB /* SKFPicPreview */,
+				F64F776635C69B1240A2B1447EA9F45B /* SKFPicPreview */,
 			);
-			name = Resuorces;
-			path = Resuorces;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5B34BC5ACC249A4C079A2E430443CBA9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CB700FFD0A774BB262C110D7A7BB6F45 /* navi_back@2x.png */,
+			);
+			name = Assets;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -370,15 +370,6 @@
 				FE4A4B7C1D1F97F7277EB7F3D45535B6 /* Products */,
 				9228CEF6805F5923CFFA35979638E91A /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		80250AB54EFD7F0A6F95156DEA8EE38D /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				D2E04F244F80DAD3BBC7E737D405CC6B /* navi_back@2x.png */,
-			);
-			name = Assets;
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		9228CEF6805F5923CFFA35979638E91A /* Targets Support Files */ = {
@@ -435,15 +426,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CB0E53BA356C609B1D993C2CB64A64DB /* SKFPicPreview */ = {
-			isa = PBXGroup;
-			children = (
-				80250AB54EFD7F0A6F95156DEA8EE38D /* Assets */,
-			);
-			name = SKFPicPreview;
-			path = SKFPicPreview;
-			sourceTree = "<group>";
-		};
 		E40FB39D9DE39DE91BDB685364365A07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,7 +445,7 @@
 		EF0E083836E4BA5A9194EB8E88D5E83D /* SKFPicPreview */ = {
 			isa = PBXGroup;
 			children = (
-				2CB000E704EBBF33E166B59F79484CA4 /* Resources */,
+				39C8011E27ADAB6CE37ACA49C28FF544 /* Resources */,
 				A791F98A541BCD8C1C8B9336B1A14BD0 /* SKFPicPreview */,
 				1BAF87DB42BE50F4B0915B7909690256 /* Support Files */,
 			);
@@ -478,6 +460,15 @@
 				1C26D069A06B080199D08264D4C11938 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F64F776635C69B1240A2B1447EA9F45B /* SKFPicPreview */ = {
+			isa = PBXGroup;
+			children = (
+				5B34BC5ACC249A4C079A2E430443CBA9 /* Assets */,
+			);
+			name = SKFPicPreview;
+			path = SKFPicPreview;
 			sourceTree = "<group>";
 		};
 		FE4A4B7C1D1F97F7277EB7F3D45535B6 /* Products */ = {

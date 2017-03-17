@@ -2,7 +2,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
-  - SKFPicPreview (1.1):
+  - SKFPicPreview (1.2):
     - SDWebImage
 
 DEPENDENCIES:
@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  SKFPicPreview: 13d0e451e16176b84b7d780e9ff4dce1b635bc52
+  SKFPicPreview: ccb5dd844eb84a5d7e8ef1a429b3185ba1f92061
 
 PODFILE CHECKSUM: 3895a093fd77457f8a9a2df135d3d74b06ef5156
 
